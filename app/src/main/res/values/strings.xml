@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">DoggosApp</string>
     <!-- Login -->
-    <string name="username_hint">Create a username</string>
-    <string name="password_hint">Create a password</string>
+    <string name="username_hint">enter username</string>
+    <string name="password_hint">enter password</string>
     <string name="null_username_error">Please enter a username to continue</string>
     <string name="null_password_error">Please enter a password to continue</string>
     <string name="password_error">Password cannot contain username</string>
@@ -27,10 +27,10 @@
     <string name="api_base_url">https://dog.ceo/api/breed/</string>
     <string name="api_endpoint">/images</string>
     <string name="api_endpoint_random">/images/random</string>
-
-
-
-
+    <string name="launch_welcome">Welcome to the Doggos app!</string>
+    <string name="login_prompt">Please log in to continue</string>
+    <string name="dog_image_description">Dog Breeds</string>
+    <string name="logout_menu_item">Logout</string>
 
 
 </resources>
