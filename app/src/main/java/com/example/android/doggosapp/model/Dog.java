@@ -5,4 +5,21 @@ package com.example.android.doggosapp.model;
  */
 
 public class Dog {
+    String message;
+
+    public Dog (){
+
+    }
+
+    public Dog (String dog){
+        this.message = dog;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }

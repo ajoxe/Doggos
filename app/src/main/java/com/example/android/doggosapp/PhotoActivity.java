@@ -7,16 +7,28 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageView;
+
+import com.squareup.picasso.Picasso;
 
 public class PhotoActivity extends AppCompatActivity {
     SharedPreferences login;
     String SHARED_PREFS_KEY;
     String USER_KEY;
+    ImageView dogImage;
+    String dogUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
+        initializeSharedPrefs();
+        Intent intent = getIntent();
+        dogUrl = intent.getStringExtra("url");
+        dogImage = (ImageView) findViewById(R.id.dog_large_photo_iv);
+        Picasso.with(getApplicationContext())
+                .load(dogUrl)
+                .into(dogImage);
     }
 
     public void initializeSharedPrefs() {
@@ -36,6 +48,7 @@ public class PhotoActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         SharedPreferences.Editor editor = login.edit();
         editor.putString(USER_KEY, null);
+        editor.commit();
         Intent loginIntent = new Intent(PhotoActivity.this, LoginActivity.class);
         startActivity(loginIntent);
         return true;

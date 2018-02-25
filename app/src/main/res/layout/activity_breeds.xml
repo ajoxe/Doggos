@@ -38,7 +38,7 @@
 
 
                 <ImageView
-                    android:id="@+id/dog_breed_card_iv"
+                    android:id="@+id/poodle_breed_card_iv"
                     android:layout_width="@dimen/image_dimen"
                     android:layout_height="@dimen/image_dimen"
                     tools:background="@tools:sample/avatars" />
@@ -55,7 +55,7 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/retriever_card"
+            android:id="@+id/retriever_breed_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="breedOnClick"
@@ -71,7 +71,7 @@
 
 
                 <ImageView
-                    android:id="@+id/poodle_breed_card_iv"
+                    android:id="@+id/retriever_breed_card_iv"
                     android:layout_width="@dimen/image_dimen"
                     android:layout_height="@dimen/image_dimen"
                     tools:background="@tools:sample/avatars" />
