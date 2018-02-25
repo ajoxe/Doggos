@@ -9,5 +9,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        //TODO shared prefs add username
+        //TODO login logic
     }
 }
