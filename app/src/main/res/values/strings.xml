@@ -5,12 +5,14 @@
     <string name="password_hint">enter password</string>
     <string name="null_username_error">Please enter a username to continue</string>
     <string name="null_password_error">Please enter a password to continue</string>
+    <string name="null_username_password_error">Please enter a username and password to continue</string>
     <string name="password_error">Password cannot contain username</string>
     <string name="submit_button">Submit</string>
 
     <!-- SharedPreferences -->
     <string name="username_key">username</string>
     <string name="password_key">password</string>
+    <string name="shared_preferences_key">password</string>
 
     <!-- Welcome-->
     <string name="welcome_user">Welcome </string>

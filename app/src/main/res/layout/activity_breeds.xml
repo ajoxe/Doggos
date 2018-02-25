@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/pick_dog_prompt"
-            android:textSize="@dimen/h1_dimen" />
+            android:textSize="@dimen/h2_dimen" />
 
         <android.support.v7.widget.CardView
             android:id="@+id/poodle_card"
