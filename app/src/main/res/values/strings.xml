@@ -15,7 +15,7 @@
     <string name="shared_preferences_key">password</string>
 
     <!-- Welcome-->
-    <string name="welcome_user">Welcome </string>
+    <string name="welcome_user">Welcome \u0020</string>
     <string name="pick_dog_prompt">What kind of dog would you like to see, </string>
 
     <!-- Breeds-->
