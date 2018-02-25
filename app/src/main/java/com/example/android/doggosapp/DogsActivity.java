@@ -76,13 +76,13 @@ public class DogsActivity extends AppCompatActivity {
                     Dogs dogs = response.body();
                     Log.d("doglist", "size" + dogs.getMessage().length);
 
-                    /*if (dogs != null) {
+                    if (dogs != null) {
                         for (String dog : dogs.getMessage()) {
                             Dog thisDog = new Dog(dog);
                             dogList.add(thisDog);
                             Log.d("doglist", thisDog.getMessage());
                         }
-                    }*/
+                    }
 
 
 
