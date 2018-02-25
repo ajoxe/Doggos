@@ -51,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         if (validLogin(username, password)){
             SharedPreferences.Editor prefEditor = login.edit();
             prefEditor.putString(USER_KEY, username);
+            prefEditor.commit();
             startActivity(breedsIntent);
         }
     }
@@ -67,9 +68,6 @@ public class LoginActivity extends AppCompatActivity {
         return passwordEditText.getText().toString().equals("");
     }
 
-    private boolean loginNotNull(){
-       return !usernameIsNull() && !passwordIsNull();
-    }
 
     private boolean validLogin(String username, String password){
         if (usernameIsNull() && passwordIsNull()){
