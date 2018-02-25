@@ -1,9 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/layout_padding"
     tools:context="com.example.android.doggosapp.BreedsActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pick_dog_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_dog_prompt"
+            android:textSize="@dimen/h1_dimen" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/poodle_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="breedOnClick"
+            android:tag="@string/breed_poodle"
+            app:cardCornerRadius="@dimen/cardview_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/dog_breed_card_iv"
+                    android:layout_width="@dimen/image_dimen"
+                    android:layout_height="@dimen/image_dimen"
+                    tools:background="@tools:sample/avatars" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/breed_poodle"
+                    android:textSize="@dimen/h1_dimen" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/retriever_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="breedOnClick"
+            android:tag="@string/breed_retriever"
+            app:cardCornerRadius="@dimen/cardview_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/poodle_breed_card_iv"
+                    android:layout_width="@dimen/image_dimen"
+                    android:layout_height="@dimen/image_dimen"
+                    tools:background="@tools:sample/avatars" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/breed_retriever"
+                    android:textSize="@dimen/h1_dimen" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/spaniel_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="breedOnClick"
+            android:tag="@string/breed_spaniel"
+            app:cardCornerRadius="@dimen/cardview_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/spaniel_breed_card_iv"
+                    android:layout_width="@dimen/image_dimen"
+                    android:layout_height="@dimen/image_dimen"
+                    tools:background="@tools:sample/avatars" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/breed_spaniel"
+                    android:textSize="@dimen/h1_dimen" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/terrier_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="breedOnClick"
+            android:tag="@string/breed_terrier"
+            app:cardCornerRadius="@dimen/cardview_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/terrier_breed_card_iv"
+                    android:layout_width="@dimen/image_dimen"
+                    android:layout_height="@dimen/image_dimen"
+                    tools:background="@tools:sample/avatars" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/breed_terrier"
+                    android:textSize="@dimen/h1_dimen" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
+
+
