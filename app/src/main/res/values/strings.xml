@@ -16,7 +16,7 @@
 
     <!-- Welcome-->
     <string name="welcome_user">Welcome \u0020</string>
-    <string name="pick_dog_prompt">What kind of dog would you like to see, </string>
+    <string name="pick_dog_prompt">What kind of dog would you like to see?</string>
 
     <!-- Breeds-->
     <string name="breed_poodle">Poodle</string>
