@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">DoggosApp</string>
+    <!-- Login -->
+    <string name="username_hint">Create a username</string>
+    <string name="password_hint">Create a password</string>
+    <string name="null_username_error">Please enter a username to continue</string>
+    <string name="null_password_error">Please enter a password to continue</string>
+    <string name="password_error">Password cannot contain username</string>
+    <string name="submit_button">Submit</string>
+
+    <!-- SharedPreferences -->
+    <string name="username_key">username</string>
+    <string name="password_key">password</string>
+
+    <!-- Welcome-->
+    <string name="welcome_user">Welcome </string>
+    <string name="pick_dog_prompt">What kind of dog would you like to see, </string>
+
+    <!-- Breeds-->
+    <string name="breed_poodle">Poodle</string>
+    <string name="breed_terrier">Terrier</string>
+    <string name="breed_retriever">Retriever</string>
+    <string name="breed_spaniel">Spaniel</string>
+
+    <!-- Retrofit-->
+
+    <string name="api_base_url">https://dog.ceo/api/breed/</string>
+    <string name="api_endpoint">/images</string>
+    <string name="api_endpoint_random">/images/random</string>
+
+
+
+
+
+
 </resources>
