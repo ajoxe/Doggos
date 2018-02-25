@@ -51,26 +51,15 @@ public class BreedsActivity extends AppCompatActivity {
         endpoint = getResources().getString(R.string.api_endpoint_random);
 
 
-        poodleImage = getRandomDogResponseCall("poodle");
-        spanielImage = getRandomDogResponseCall("spaniel");
-        retrieverImage = getRandomDogResponseCall("retriever");
-        terrierImage = getRandomDogResponseCall("terrier");
+        poodleImage = getRandomDogResponseCall("poodle", poodle);
+        spanielImage = getRandomDogResponseCall("spaniel", spaniel);
+        retrieverImage = getRandomDogResponseCall("retriever", retriever);
+        Log.d("image", "url" + retrieverImage);
+        terrierImage = getRandomDogResponseCall("terrier", terrier);
 
-        Picasso.with(getApplicationContext())
-                .load(poodleImage)
-                .into(poodle);
-        Picasso.with(getApplicationContext())
-                .load(spanielImage)
-                .into(spaniel);
-        Picasso.with(getApplicationContext())
-                .load(terrierImage)
-                .into(terrier);
-        Picasso.with(getApplicationContext())
-                .load(retrieverImage)
-                .into(retriever);
     }
 
-    public String getRandomDogResponseCall(String breed) {
+    public String getRandomDogResponseCall(String breed, final ImageView view) {
         Log.d("dog", "dog call");
 
 
@@ -87,6 +76,10 @@ public class BreedsActivity extends AppCompatActivity {
                     Log.d("dog", dog.getMessage());
                     imageUrl = dog.getMessage();
                 }
+
+                Picasso.with(getApplicationContext())
+                        .load(imageUrl)
+                        .into(view);
 
             }
 

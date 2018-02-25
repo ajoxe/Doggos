@@ -8,7 +8,8 @@
     <ImageView
         android:id="@+id/dog_large_photo_iv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:src="@tools:sample/backgrounds/scenic"/>
+        android:layout_height="match_parent"
+        tools:src="@tools:sample/backgrounds/scenic"
+        />
 
 </LinearLayout>

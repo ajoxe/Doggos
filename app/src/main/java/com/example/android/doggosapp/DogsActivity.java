@@ -72,7 +72,7 @@ public class DogsActivity extends AppCompatActivity {
             public void onResponse(Call<Dogs> call, Response<Dogs> response) {
                 if (response.isSuccessful()){
 
-                    dogList = new ArrayList<>();
+
                     Dogs dogs = response.body();
                     Log.d("doglist", "size" + dogs.getMessage().length);
 
@@ -84,9 +84,8 @@ public class DogsActivity extends AppCompatActivity {
                         }
                     }
 
-
-
                     dogAdapter.notifyDataSetChanged();
+                    Log.d("doglist", "size" + dogList.size());
                 }
 
             }

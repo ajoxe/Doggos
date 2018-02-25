@@ -2,6 +2,7 @@ package com.example.android.doggosapp.dogsrecyclerview;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -24,6 +25,7 @@ public class DogViewHolder  extends RecyclerView.ViewHolder{
         Picasso.with(context)
                 .load(dog.getMessage())
                 .into(dogImage);
+        Log.d("imageUrl", dog.getMessage());
 
     }
 }
