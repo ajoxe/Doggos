@@ -72,7 +72,6 @@ public class DogsActivity extends AppCompatActivity {
             public void onResponse(Call<Dogs> call, Response<Dogs> response) {
                 if (response.isSuccessful()){
 
-
                     Dogs dogs = response.body();
                     Log.d("doglist", "size" + dogs.getMessage().length);
 
