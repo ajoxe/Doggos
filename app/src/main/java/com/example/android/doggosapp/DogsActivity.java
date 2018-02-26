@@ -2,15 +2,18 @@ package com.example.android.doggosapp;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.android.doggosapp.dogsrecyclerview.DogAdapter;
 import com.example.android.doggosapp.model.Dog;
@@ -33,6 +36,7 @@ public class DogsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     DogAdapter dogAdapter;
     List<Dog> dogList = new ArrayList<>();
+    TextView brredTV;
 
 
     @Override
@@ -42,12 +46,22 @@ public class DogsActivity extends AppCompatActivity {
         initializeSharedPrefs();
         Intent intent = getIntent();
         breed = intent.getStringExtra("breed");
+        brredTV = (TextView) findViewById(R.id.breed_text_view);
+        brredTV.setText(breed);
         getDogList(breed.toLowerCase());
+        Configuration config = getResources().getConfiguration();
         setDogClick();
+
         recyclerView = (RecyclerView) findViewById(R.id.dog_recycler_view);
         dogAdapter = new DogAdapter(dogList, getApplicationContext(), dogClick);
         recyclerView.setAdapter(dogAdapter);
-        recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+
+        if (config.orientation == 2){
+            recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 3));
+
+        }else {
+            recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+        }
     }
     public void setDogClick(){
         dogClick = new View.OnClickListener() {

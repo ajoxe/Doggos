@@ -9,4 +9,6 @@
     <dimen name="h2_dimen">24sp</dimen>
     <dimen name="h3_dimen">16sp</dimen>
     <dimen name="card_elevation">5dp</dimen>
+    <dimen name="item_view_padding">42dp</dimen>
+    <dimen name="item_view_margin">24dp</dimen>
 </resources>
