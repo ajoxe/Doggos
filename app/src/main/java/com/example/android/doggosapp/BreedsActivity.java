@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import com.example.android.doggosapp.model.Dog;
 import com.example.android.doggosapp.network.NetworkUtility;
@@ -32,6 +33,7 @@ public class BreedsActivity extends AppCompatActivity {
     String welcome;
 
     ImageView poodle, spaniel, retriever, terrier;
+    ProgressBar loadingDogs;
     List<ImageView> imageViews = new ArrayList<>();
 
 
@@ -42,6 +44,8 @@ public class BreedsActivity extends AppCompatActivity {
         initializeSharedPrefs();
         username = login.getString(USER_KEY, null);
         getSupportActionBar().setTitle(welcome + username);
+
+        loadingDogs = (ProgressBar) findViewById(R.id.breeds_progress_bar);
 
         poodle = (ImageView) findViewById(R.id.poodle_breed_card_iv);
         spaniel = (ImageView) findViewById(R.id.spaniel_breed_card_iv);
@@ -60,6 +64,7 @@ public class BreedsActivity extends AppCompatActivity {
         utility.getRandomResponseCall(breed, new ResponseListener() {
             @Override
             public void updateUI(String... strings) {
+                loadingDogs.setVisibility(View.GONE);
                 Picasso.with(getApplicationContext())
                         .load(strings[0])
                         .resize(100, 100)
