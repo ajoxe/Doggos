@@ -43,6 +43,9 @@ public class DogsActivity extends AppCompatActivity {
         initializeSharedPrefs();
         Intent intent = getIntent();
         breed = intent.getStringExtra("breed");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.dogicoappbar);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setTitle(breed);
         loadingDogs = (ProgressBar) findViewById(R.id.dogs_progress_bar);
         requestBreed(breed.toLowerCase());
@@ -69,6 +72,7 @@ public class DogsActivity extends AppCompatActivity {
                 String imageUrl = v.getTag().toString();
                 Intent intent = new Intent(DogsActivity.this, PhotoActivity.class);
                 intent.putExtra("url",imageUrl);
+                intent.putExtra("breed", breed);
                 startActivity(intent);
             }
         };
