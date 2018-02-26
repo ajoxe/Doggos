@@ -9,15 +9,6 @@
     android:gravity="center"
     android:background="@color/colorPrimaryDark">
 
-    <TextView
-        android:id="@+id/breed_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="@dimen/h1_dimen"
-        tools:text="@tools:sample/lorem"
-        android:padding="@dimen/layout_padding"
-        android:textColor="@color/colorAccent"/>
     <ProgressBar
         android:id="@+id/dogs_progress_bar"
         android:layout_width="@dimen/image_dimen"

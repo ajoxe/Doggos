@@ -44,8 +44,11 @@ public class BreedsActivity extends AppCompatActivity {
 
         initializeSharedPrefs();
         username = login.getString(USER_KEY, null);
-
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.dogicoappbar);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
         getSupportActionBar().setTitle(welcome + username);
+
         setImageViews();
 
     }

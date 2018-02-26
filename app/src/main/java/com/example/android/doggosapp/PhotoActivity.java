@@ -25,6 +25,11 @@ public class PhotoActivity extends AppCompatActivity {
         initializeSharedPrefs();
         Intent intent = getIntent();
         dogUrl = intent.getStringExtra("url");
+        String breed = breed = intent.getStringExtra("breed");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.drawable.dogicoappbar);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setTitle(breed);
         dogImage = (ImageView) findViewById(R.id.dog_large_photo_iv);
         Picasso.with(getApplicationContext())
                 .load(dogUrl)

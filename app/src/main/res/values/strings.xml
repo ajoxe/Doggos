@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DoggosApp</string>
+    <string name="app_name">doggos</string>
     <!-- Login -->
     <string name="username_hint">enter username</string>
     <string name="password_hint">enter password</string>
