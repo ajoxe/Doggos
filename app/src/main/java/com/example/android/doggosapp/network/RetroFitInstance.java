@@ -14,11 +14,9 @@ public class RetroFitInstance {
 
     public static RetroFitInstance instance;
 
-
     public RetroFitInstance() {
 
     }
-
 
     public static RetroFitInstance getInstance() {
         if (instance == null) {
@@ -27,15 +25,11 @@ public class RetroFitInstance {
         return instance;
     }
 
-
-
     Retrofit getRetrofit() { // getting the retofit builder to use in other methods
         return new Retrofit.Builder()
                 .baseUrl(base_url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-
-
     }
 
     public DogService getApi() {

@@ -1,12 +1,11 @@
 package com.example.android.doggosapp.network;
 
-import android.content.Context;
+
 import android.util.Log;
 
 import com.example.android.doggosapp.model.Dog;
 import com.example.android.doggosapp.model.Dogs;
 
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;

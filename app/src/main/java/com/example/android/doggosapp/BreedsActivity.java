@@ -41,12 +41,17 @@ public class BreedsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breeds);
+
         initializeSharedPrefs();
         username = login.getString(USER_KEY, null);
+
         getSupportActionBar().setTitle(welcome + username);
+        setImageViews();
 
+    }
+
+    public void setImageViews(){
         loadingDogs = (ProgressBar) findViewById(R.id.breeds_progress_bar);
-
         poodle = (ImageView) findViewById(R.id.poodle_breed_card_iv);
         spaniel = (ImageView) findViewById(R.id.spaniel_breed_card_iv);
         retriever = (ImageView) findViewById(R.id.retriever_breed_card_iv);
@@ -56,7 +61,6 @@ public class BreedsActivity extends AppCompatActivity {
         imageViews.add(retriever);
         imageViews.add(terrier);
         loadImage(imageViews);
-
     }
 
     public void getImage(String breed, final ImageView imageView){
@@ -77,7 +81,6 @@ public class BreedsActivity extends AppCompatActivity {
         for(ImageView view : imageViews){
             getImage(view.getTag().toString().toLowerCase(), view);
         }
-
     }
 
     public void breedOnClick(View view) {
@@ -87,8 +90,6 @@ public class BreedsActivity extends AppCompatActivity {
         dogIntent.putExtra("breed", breed);
         startActivity(dogIntent);
     }
-
-
 
     public void initializeSharedPrefs() {
         SHARED_PREFS_KEY = getResources().getString(R.string.shared_preferences_key);
