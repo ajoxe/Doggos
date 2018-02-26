@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.android.doggosapp.DogsActivity"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@color/colorPrimaryDark">
 
     <TextView
         android:id="@+id/breed_text_view"
@@ -15,7 +16,8 @@
         android:gravity="center"
         android:textSize="@dimen/h1_dimen"
         tools:text="@tools:sample/lorem"
-        android:padding="@dimen/layout_padding"/>
+        android:padding="@dimen/layout_padding"
+        android:textColor="@color/colorAccent"/>
     <ProgressBar
         android:id="@+id/dogs_progress_bar"
         android:layout_width="@dimen/image_dimen"
