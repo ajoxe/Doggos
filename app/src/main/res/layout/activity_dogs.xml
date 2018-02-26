@@ -18,11 +18,17 @@
         android:textSize="@dimen/h1_dimen"
         tools:text="@tools:sample/lorem"
         android:padding="@dimen/layout_padding"/>
+    <ProgressBar
+        android:id="@+id/dogs_progress_bar"
+        android:layout_width="@dimen/image_dimen"
+        android:layout_height="@dimen/image_dimen"
+        android:layout_gravity="center"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/dog_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:foregroundGravity="center"
+        android:visibility="gone"
         />
 </LinearLayout>

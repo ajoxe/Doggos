@@ -13,8 +13,12 @@ import android.widget.ImageView;
 
 import com.example.android.doggosapp.model.Dog;
 import com.example.android.doggosapp.network.NetworkUtility;
+import com.example.android.doggosapp.network.ResponseListener;
 import com.example.android.doggosapp.network.RetroFitInstance;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,13 +30,9 @@ public class BreedsActivity extends AppCompatActivity {
     String USER_KEY;
     String username;
     String welcome;
-    String base_url;
-    String endpoint;
-    String imageUrl;
-
-    String poodleImage, spanielImage, retrieverImage, terrierImage;
 
     ImageView poodle, spaniel, retriever, terrier;
+    List<ImageView> imageViews = new ArrayList<>();
 
 
     @Override
@@ -47,52 +47,33 @@ public class BreedsActivity extends AppCompatActivity {
         spaniel = (ImageView) findViewById(R.id.spaniel_breed_card_iv);
         retriever = (ImageView) findViewById(R.id.retriever_breed_card_iv);
         terrier = (ImageView) findViewById(R.id.terrier_breed_card_iv);
-
-        base_url = getResources().getString(R.string.api_base_url);
-        endpoint = getResources().getString(R.string.api_endpoint_random);
-
-
-        poodleImage = getRandomDogResponseCall("poodle", poodle);
-        spanielImage = getRandomDogResponseCall("spaniel", spaniel);
-        retrieverImage = getRandomDogResponseCall("retriever", retriever);
-        Log.d("image", "url" + retrieverImage);
-        terrierImage = getRandomDogResponseCall("terrier", terrier);
+        imageViews.add(poodle);
+        imageViews.add(spaniel);
+        imageViews.add(retriever);
+        imageViews.add(terrier);
+        loadImage(imageViews);
 
     }
 
-    public String getRandomDogResponseCall(String breed, final ImageView view) {
-        Log.d("dog", "dog call");
-
-
-        Call<Dog> getRandomDog = RetroFitInstance.getInstance()
-                .getApi()
-                .getRandomDog(breed);
-
-        getRandomDog.enqueue(new Callback<Dog>() {
+    public void getImage(String breed, final ImageView imageView){
+        NetworkUtility utility = NetworkUtility.getUtility();
+        utility.getRandomResponseCall(breed, new ResponseListener() {
             @Override
-            public void onResponse(Call<Dog> call, Response<Dog> response) {
-                Log.d("dog", response.body().toString());
-                if (response.isSuccessful()){
-                    Dog dog = response.body();
-                    Log.d("dog", dog.getMessage());
-                    imageUrl = dog.getMessage();
-                }
-
+            public void updateUI(String... strings) {
                 Picasso.with(getApplicationContext())
-                        .load(imageUrl)
-                        .into(view);
-
-            }
-
-            @Override
-            public void onFailure(Call<Dog> call, Throwable t) {
-                t.printStackTrace();
+                        .load(strings[0])
+                        .resize(100, 100)
+                        .into(imageView);
             }
         });
-        return imageUrl;
     }
 
+    public void loadImage(List<ImageView> imageViews){
+        for(ImageView view : imageViews){
+            getImage(view.getTag().toString().toLowerCase(), view);
+        }
 
+    }
 
     public void breedOnClick(View view) {
         String breed = view.getTag().toString();

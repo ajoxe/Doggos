@@ -45,7 +45,8 @@
                     android:layout_width="@dimen/image_dimen"
                     android:layout_height="@dimen/image_dimen"
                     tools:background="@tools:sample/avatars"
-                    android:scaleType="fitXY"/>
+                    android:scaleType="fitXY"
+                    android:tag="@string/breed_poodle"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -88,7 +89,8 @@
                     android:layout_width="@dimen/image_dimen"
                     android:layout_height="@dimen/image_dimen"
                     tools:background="@tools:sample/avatars"
-                    android:scaleType="fitXY"/>
+                    android:scaleType="fitXY"
+                    android:tag="@string/breed_retriever"/>
 
             </LinearLayout>
         </android.support.v7.widget.CardView>
@@ -115,7 +117,8 @@
                     android:layout_width="@dimen/image_dimen"
                     android:layout_height="@dimen/image_dimen"
                     tools:background="@tools:sample/avatars"
-                    android:scaleType="fitXY"/>
+                    android:scaleType="fitXY"
+                    android:tag="@string/breed_spaniel"/>
 
                 <TextView
                     android:layout_width="0dp"
@@ -157,7 +160,8 @@
                     android:layout_width="@dimen/image_dimen"
                     android:layout_height="@dimen/image_dimen"
                     tools:background="@tools:sample/avatars"
-                    android:scaleType="fitXY"/>
+                    android:scaleType="fitXY"
+                    android:tag="@string/breed_terrier"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
