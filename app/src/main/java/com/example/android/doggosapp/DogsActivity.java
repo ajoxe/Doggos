@@ -31,7 +31,6 @@ public class DogsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     DogAdapter dogAdapter;
     List<Dog> dogList = new ArrayList<>();
-    TextView breedTextView;
     ProgressBar loadingDogs;
     Configuration config;
 
@@ -44,8 +43,7 @@ public class DogsActivity extends AppCompatActivity {
         initializeSharedPrefs();
         Intent intent = getIntent();
         breed = intent.getStringExtra("breed");
-        breedTextView = (TextView) findViewById(R.id.breed_text_view);
-        breedTextView.setText(breed);
+        getSupportActionBar().setTitle(breed);
         loadingDogs = (ProgressBar) findViewById(R.id.dogs_progress_bar);
         requestBreed(breed.toLowerCase());
         setDogClick();

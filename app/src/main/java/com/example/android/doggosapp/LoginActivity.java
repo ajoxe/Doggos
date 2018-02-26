@@ -17,7 +17,6 @@ public class LoginActivity extends AppCompatActivity {
     String USER_KEY;
     Intent breedsIntent;
     EditText usernameEditText, passwordEditText;
-    TextView errorMessageTV;
     Button submitButton;
 
 
@@ -36,7 +35,6 @@ public class LoginActivity extends AppCompatActivity {
         usernameEditText = (EditText) findViewById(R.id.username_edit_text);
         passwordEditText = (EditText) findViewById(R.id.password_edit_text);
         submitButton = (Button) findViewById(R.id.submit_button);
-        errorMessageTV = (TextView) findViewById(R.id.error_message_tv);
 
 
         //TODO shared prefs add username

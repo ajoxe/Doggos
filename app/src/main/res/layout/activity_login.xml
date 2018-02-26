@@ -7,22 +7,14 @@
     android:orientation="vertical"
     android:padding="@dimen/layout_padding"
     tools:context="com.example.android.doggosapp.LoginActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/launch_welcome"
-        android:textSize="@dimen/h1_dimen"
+    <ImageView
+        android:layout_width="@dimen/login_image_dimen"
+        android:layout_height="@dimen/login_image_dimen"
+        android:src="@drawable/dogico"
         android:layout_marginBottom="@dimen/margin_bottom"
         android:layout_marginTop="@dimen/layout_padding"
         android:padding="@dimen/layout_padding"
-        android:gravity="center"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login_prompt"
-        android:textSize="@dimen/h3_dimen"
-        android:layout_marginBottom="@dimen/margin_bottom"
-        android:gravity="center"/>
+        android:layout_gravity="center"/>
 
     <EditText
         android:id="@+id/username_edit_text"
@@ -37,6 +29,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/password_hint"
         android:textSize="@dimen/h2_dimen"
+        android:layout_marginBottom="@dimen/layout_padding"
         />
     <Button
         android:id="@+id/submit_button"
@@ -45,12 +38,5 @@
         android:text="@string/submit_button"
         android:onClick="loginOnClick"
         android:background="@drawable/buttons"/>
-    <TextView
-        android:id="@+id/error_message_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/h3_dimen"
-        tools:text="@tools:sample/lorem/random"
-        android:visibility="gone"/>
 
 </LinearLayout>
