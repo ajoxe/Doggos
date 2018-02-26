@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="layout_padding">16dp</dimen>
+    <dimen name="layout_padding">24dp</dimen>
     <dimen name="margin_bottom">42dp</dimen>
     <dimen name="cardview_padding">8dp</dimen>
     <dimen name="cardview_radius">4dp</dimen>
@@ -9,4 +9,6 @@
     <dimen name="h2_dimen">24sp</dimen>
     <dimen name="h3_dimen">16sp</dimen>
     <dimen name="card_elevation">5dp</dimen>
+    <dimen name="item_view_padding">42dp</dimen>
+    <dimen name="item_view_margin">24dp</dimen>
 </resources>

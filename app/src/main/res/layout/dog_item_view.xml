@@ -8,7 +8,8 @@
     android:layout_height="@dimen/image_dimen"
     xmlns:tools="http://schemas.android.com/tools"
     tools:src="@tools:sample/avatars"
-    android:layout_margin="@dimen/layout_padding"
+    android:scaleType="fitXY"
+    android:layout_marginBottom="@dimen/item_view_margin"
     >
 
 </ImageView>

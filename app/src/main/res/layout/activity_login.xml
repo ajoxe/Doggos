@@ -43,7 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/submit_button"
-        android:onClick="loginOnClick"/>
+        android:onClick="loginOnClick"
+        android:background="@drawable/buttons"/>
     <TextView
         android:id="@+id/error_message_tv"
         android:layout_width="match_parent"
