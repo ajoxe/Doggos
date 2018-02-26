@@ -62,6 +62,7 @@ public class DogsActivity extends AppCompatActivity {
             recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
         }
 
+
     }
     public void setDogClick(){
         dogClick = new View.OnClickListener() {

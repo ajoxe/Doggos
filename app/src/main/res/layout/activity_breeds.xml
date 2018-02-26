@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context="com.example.android.doggosapp.BreedsActivity">
 
 
@@ -13,6 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/breeds_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/pick_dog_text_view"
@@ -29,7 +34,6 @@
             android:layout_height="@dimen/image_dimen"
             android:onClick="breedOnClick"
             android:tag="@string/breed_poodle"
-            app:cardCornerRadius="@dimen/cardview_radius"
             app:cardElevation="@dimen/card_elevation"
             android:layout_marginBottom="@dimen/layout_padding"
             >

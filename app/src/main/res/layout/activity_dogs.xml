@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="@dimen/item_view_padding"
     tools:context="com.example.android.doggosapp.DogsActivity"
-
     android:gravity="center">
 
     <TextView
@@ -26,9 +24,8 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/dog_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:foregroundGravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:visibility="gone"
         />
 </LinearLayout>

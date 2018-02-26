@@ -18,18 +18,13 @@ import retrofit2.Response;
 
 public class NetworkUtility {
     private static NetworkUtility utility;
-    Dogs dogs = new Dogs();
-    private static List<Dog> dogList;
-    private static Dog dog;
 
-    public static NetworkUtility getUtility(){
+    public static NetworkUtility getUtility() {
         if (utility == null) {
             utility = new NetworkUtility();
         }
         return utility;
     }
-
-
 
 
     public void getAllDogsResponseCall(String breed, final ResponseListener listener) {
@@ -40,19 +35,9 @@ public class NetworkUtility {
         getAllDogs.enqueue(new Callback<Dogs>() {
             @Override
             public void onResponse(Call<Dogs> call, Response<Dogs> response) {
-                if (response.isSuccessful()){
-
-
+                if (response.isSuccessful()) {
                     listener.updateUI(response.body().getMessage());
-
-                    /*if (dogs != null) {
-                        for (String dog : dogs.getMessage()) {
-                            Dog thisDog = new Dog(dog);
-                            dogList.add(thisDog);
-                            Log.d("doglist", thisDog.getMessage());
-                        }*/
-                    }
-
+                }
             }
 
             @Override
@@ -72,7 +57,7 @@ public class NetworkUtility {
             @Override
             public void onResponse(Call<Dog> call, Response<Dog> response) {
                 Log.d("dog", response.body().toString());
-                if (response.isSuccessful()){
+                if (response.isSuccessful()) {
                     listener.updateUI(response.body().getMessage());
                 }
             }
