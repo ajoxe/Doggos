@@ -55,7 +55,7 @@ public class NetworkUtility {
         getRandomDog.enqueue(new Callback<Dog>() {
             @Override
             public void onResponse(Call<Dog> call, Response<Dog> response) {
-                Log.d("dog", response.body().toString());
+
                 if (response.isSuccessful()) {
                     listener.updateUI(response.body().getMessage());
                 }
