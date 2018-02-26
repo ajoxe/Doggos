@@ -52,32 +52,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private boolean passwordContainsUsername(String password, String username) {
-        return password.contains(username);
-    }
-
-    private boolean usernameIsNull() {
-        return usernameEditText.getText().toString().equals("");
-    }
-
-    private boolean passwordIsNull() {
-        return passwordEditText.getText().toString().equals("");
-    }
-
-    public void errorAlert(String message) {
-        AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create();
-        alertDialog.setTitle("!");
-        alertDialog.setMessage(message);
-        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                });
-        alertDialog.show();
-
-    }
-
     private boolean validateLogin(String username, String password) {
         if (usernameIsNull() && passwordIsNull()) {
             errorAlert(getResources().getString(R.string.null_username_password_error));
@@ -101,5 +75,31 @@ public class LoginActivity extends AppCompatActivity {
         prefEditor.putString(USER_KEY, username);
         prefEditor.commit();
         return true;
+    }
+
+    public void errorAlert(String message) {
+        AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create();
+        alertDialog.setTitle("!");
+        alertDialog.setMessage(message);
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+    }
+
+
+    private boolean passwordContainsUsername(String password, String username) {
+        return password.contains(username);
+    }
+
+    private boolean usernameIsNull() {
+        return usernameEditText.getText().toString().equals("");
+    }
+
+    private boolean passwordIsNull() {
+        return passwordEditText.getText().toString().equals("");
     }
 }

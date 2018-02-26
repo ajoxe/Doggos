@@ -14,18 +14,18 @@ import com.squareup.picasso.Picasso;
  * Created by amirahoxendine on 2/25/18.
  */
 
-public class DogViewHolder  extends RecyclerView.ViewHolder{
+public class DogViewHolder extends RecyclerView.ViewHolder {
     ImageView dogImage;
+
     public DogViewHolder(View itemView) {
         super(itemView);
         dogImage = (ImageView) itemView.findViewById(R.id.dog_item_iv);
     }
 
-    public void onBind(Dog dog, Context context){
+    public void onBind(Dog dog, Context context) {
         Picasso.with(context)
                 .load(dog.getMessage())
                 .into(dogImage);
         Log.d("imageUrl", dog.getMessage());
-
     }
 }

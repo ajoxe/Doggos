@@ -15,7 +15,7 @@ import java.util.List;
  * Created by amirahoxendine on 2/25/18.
  */
 
-public class DogAdapter extends RecyclerView.Adapter<DogViewHolder>{
+public class DogAdapter extends RecyclerView.Adapter<DogViewHolder> {
     List<Dog> dogList;
     Context context;
     View.OnClickListener dogClick;
