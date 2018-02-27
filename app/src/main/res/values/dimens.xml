@@ -12,6 +12,6 @@
     <dimen name="item_view_margin">16dp</dimen>
     <dimen name="large_letters">40sp</dimen>
     <dimen name="breed_image_dimen">150dp</dimen>
-    <dimen name="login_image_dimen">200dp</dimen>
+    <dimen name="login_image_dimen">150dp</dimen>
     <item name="letter_space_tight" type="dimen" format="float">-.1</item>
 </resources>
